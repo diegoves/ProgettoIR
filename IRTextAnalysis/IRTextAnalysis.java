@@ -231,13 +231,19 @@ public class IRTextAnalysis {
 			}
 		}
 		
-		//Media MAP
+		//Media e varianza MAP
 		//mapbmny
 		double mediamapbmny = 0;
 		for (int j = 0; j < 50; j++)
 			mediamapbmny = mediamapbmny + mapbmny[j];
 		mediamapbmny = mediamapbmny / 50;
 		System.out.println("Media mapbmny: " + mediamapbmny);
+		
+		double varmapbmny = 0;
+		for (int j = 0; j < 50; j++)
+			varmapbmny = varmapbmny + (mapbmny[j]-mediamapbmny)*(mapbmny[j]-mediamapbmny);
+		varmapbmny = varmapbmny / 50;
+		System.out.println("Varianza mapbmny: " + varmapbmny);
 		
 		//mapbmny
 		double mediamapbmyy = 0;
@@ -246,13 +252,25 @@ public class IRTextAnalysis {
 		mediamapbmyy = mediamapbmyy / 50;
 		System.out.println("Media mapbmyy: " + mediamapbmyy);
 		
+		double varmapbmyy = 0;
+		for (int j = 0; j < 50; j++)
+			varmapbmyy = varmapbmyy + (mapbmyy[j]-mediamapbmyy)*(mapbmyy[j]-mediamapbmyy);
+		varmapbmyy = varmapbmyy / 50;
+		System.out.println("Varianza mapbmyy: " + varmapbmyy);
+		
 		//mapbmny
 		double mediamapidfnn = 0;
 		for (int j = 0; j < 50; j++)
 			mediamapidfnn = mediamapidfnn + mapidfnn[j];
 		mediamapidfnn = mediamapidfnn / 50;
 		System.out.println("Media mapidfnn: " + mediamapidfnn);
-				
+		
+		double varmapidfnn = 0;
+		for (int j = 0; j < 50; j++)
+			varmapidfnn = varmapidfnn + (mapidfnn[j]-mediamapidfnn)*(mapidfnn[j]-mediamapidfnn);
+		varmapidfnn = varmapidfnn / 50;
+		System.out.println("Varianza mapidfnn: " + varmapidfnn);
+		
 		//mapbmny
 		double mediamapidfyy = 0;
 		for (int j = 0; j < 50; j++)
@@ -260,8 +278,13 @@ public class IRTextAnalysis {
 		mediamapidfyy = mediamapidfyy / 50;
 		System.out.println("Media mapidfyy: " + mediamapidfyy);
 		
+		double varmapidfyy = 0;
+		for (int j = 0; j < 50; j++)
+			varmapidfyy = varmapidfyy + (mapidfyy[j]-mediamapidfyy)*(mapidfyy[j]-mediamapidfyy);
+		varmapidfyy = varmapidfyy / 50;
+		System.out.println("Varianza mapidfyy: " + varmapidfyy);
 		
-		//Media p10
+		//Media e varianza p10
 		//p10bmny
 		double mediap10bmny = 0;
 		for (int j = 0; j < 50; j++)
@@ -269,14 +292,24 @@ public class IRTextAnalysis {
 		mediap10bmny = mediap10bmny / 50;
 		System.out.println("Media p10bmny: " + mediap10bmny);
 		
+		double varp10bmny = 0;
+		for (int j = 0; j < 50; j++)
+			varp10bmny = varp10bmny + (p10bmny[j]-mediap10bmny)*(p10bmny[j]-mediap10bmny);
+		varp10bmny = varp10bmny / 50;
+		System.out.println("Varianza p10bmny: " + varp10bmny);
+		
 		//p10bmny
 		double mediap10bmyy = 0;
 		for (int j = 0; j < 50; j++) 
 			mediap10bmyy = mediap10bmyy + p10bmyy[j];
-		
-		
 		mediap10bmyy = mediap10bmyy / 50;
 		System.out.println("Media p10bmyy: " + mediap10bmyy);
+		
+		double varp10bmyy = 0;
+		for (int j = 0; j < 50; j++) 
+			varp10bmyy = varp10bmyy + (p10bmyy[j]-mediap10bmyy)*(p10bmyy[j]-mediap10bmyy);
+		varp10bmyy = varp10bmyy / 50;
+		System.out.println("Varianza p10bmyy: " + varp10bmyy);
 		
 		//p10bmny
 		double mediap10idfnn = 0;
@@ -284,7 +317,13 @@ public class IRTextAnalysis {
 			mediap10idfnn = mediap10idfnn + p10idfnn[j];
 		mediap10idfnn = mediap10idfnn / 50;
 		System.out.println("Media p10idfnn: " + mediap10idfnn);
-				
+		
+		double varp10idfnn = 0;
+		for (int j = 0; j < 50; j++)
+			varp10idfnn = varp10idfnn + (p10idfnn[j]-mediap10idfnn)*(p10idfnn[j]-mediap10idfnn);
+		varp10idfnn = varp10idfnn / 50;
+		System.out.println("Varianza p10idfnn: " + varp10idfnn);
+		
 		//p10bmny
 		double mediap10idfyy = 0;
 		for (int j = 0; j < 50; j++)
@@ -292,13 +331,25 @@ public class IRTextAnalysis {
 		mediap10idfyy = mediap10idfyy / 50;
 		System.out.println("Media p10idfyy: " + mediap10idfyy);
 		
-		//Media prec
+		double varp10idfyy = 0;
+		for (int j = 0; j < 50; j++)
+			varp10idfyy = varp10idfyy + (p10idfyy[j] - mediap10idfyy)*(p10idfyy[j] - mediap10idfyy);
+		varp10idfyy = varp10idfyy / 50;
+		System.out.println("Varianza p10idfyy: " + varp10idfyy);
+		
+		//Media e varianza prec
 		//precbmny
 		double mediaprecbmny = 0;
 		for (int j = 0; j < 50; j++)
 			mediaprecbmny = mediaprecbmny + precbmny[j];
 		mediaprecbmny = mediaprecbmny / 50;
 		System.out.println("Media precbmny: " + mediaprecbmny);
+		
+		double varprecbmny = 0;
+		for (int j = 0; j < 50; j++)
+			varprecbmny = varprecbmny + (precbmny[j]-mediaprecbmny)*(precbmny[j]-mediaprecbmny);
+		varprecbmny = varprecbmny / 50;
+		System.out.println("Varianza precbmny: " + varprecbmny);
 		
 		//precbmny
 		double mediaprecbmyy = 0;
@@ -307,13 +358,25 @@ public class IRTextAnalysis {
 		mediaprecbmyy = mediaprecbmyy / 50;
 		System.out.println("Media precbmyy: " + mediaprecbmyy);
 		
+		double varprecbmyy = 0;
+		for (int j = 0; j < 50; j++)
+			varprecbmyy = varprecbmyy + (precbmyy[j] - mediaprecbmyy)*(precbmyy[j] - mediaprecbmyy);
+		varprecbmyy = varprecbmyy / 50;
+		System.out.println("Varianza precbmyy: " + varprecbmyy);
+		
 		//precbmny
 		double mediaprecidfnn = 0;
 		for (int j = 0; j < 50; j++)
 			mediaprecidfnn = mediaprecidfnn + precidfnn[j];
 		mediaprecidfnn = mediaprecidfnn / 50;
 		System.out.println("Media precidfnn: " + mediaprecidfnn);
-				
+		
+		double varprecidfnn = 0;
+		for (int j = 0; j < 50; j++)
+			varprecidfnn = varprecidfnn + (precidfnn[j]-mediaprecidfnn)*(precidfnn[j]-mediaprecidfnn);
+		varprecidfnn = varprecidfnn / 50;
+		System.out.println("Varianza precidfnn: " + varprecidfnn);
+		
 		//precbmny
 		double mediaprecidfyy = 0;
 		for (int j = 0; j < 50; j++)
@@ -321,6 +384,11 @@ public class IRTextAnalysis {
 		mediaprecidfyy = mediaprecidfyy / 50;
 		System.out.println("Media precidfyy: " + mediaprecidfyy);
 		
+		double varprecidfyy = 0;
+		for (int j = 0; j < 50; j++)
+			varprecidfyy = varprecidfyy + (precidfyy[j]-mediaprecidfyy)*(precidfyy[j]-mediaprecidfyy);
+		varprecidfyy = varprecidfyy / 50;
+		System.out.println("Varianza precidfyy: " + varprecidfyy);
 		
 		//ANOVA PVALUE
 		System.out.println("ANOVA PVALUE");
@@ -361,6 +429,8 @@ public class IRTextAnalysis {
 		//oneway anova
 		p10 = new OneWayAnova();
 		System.out.println("P10:\t " + p10.anovaFValue(listP10));	
+		
+		
 	}
 }
 
